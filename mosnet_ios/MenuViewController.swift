@@ -8,8 +8,17 @@
 import UIKit
 
 class MenuViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+    
+    var collectionView: UICollectionView!
 
-    var collectionView: UICollectionView?
+    let layout: UICollectionViewFlowLayout = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        layout.minimumLineSpacing = 2
+        layout.minimumInteritemSpacing = 2
+        return layout
+    }()
+
     
     private let appLogo: UIImageView = {
         let imageView = UIImageView()
@@ -18,37 +27,65 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
         return imageView
     }()
     
+    private let bottomView: UIView = {
+        let view = UIView()
+        view.layer.cornerRadius = 8
+        view.layer.borderWidth = 2
+        view.layer.borderColor = UIColor.lightGray.cgColor
+        view.backgroundColor = .link
+        return view
+    }()
+    
+    private let bottomTextLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Остались вопросы? Звоните!"
+        label.font = .systemFont(ofSize: 15, weight: .heavy)
+        label.textColor = .white
+        return label
+    }()
+    
+    private let callButton: UIButton = {
+        let button = UIButton()
+        button.layer.cornerRadius = 8
+        button.backgroundColor = .green
+        button.layer.borderColor = UIColor.white.cgColor
+        button.layer.borderWidth = 2
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
+        
+        setupCollectionView()
+        setupNavBar()
         setupLayout()
-        
     }
     
-    private func setupUI() {
-        view.backgroundColor = .red
-        navigationController?.navigationBar.addSubview(appLogo)
-        navigationController?.navigationBar.prefersLargeTitles = true
-    }
     
-    private func setupLayout() {
-        
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
-        layout.minimumLineSpacing = 2
-        layout.minimumInteritemSpacing = 2
-        layout.itemSize = CGSize(width: (view.frame.size.width / 2) - 1,
-                                 height: (view.frame.size.width / 3) - 1)
+    private func setupCollectionView() {
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        guard let collectionView = collectionView else { return }
-        collectionView.register(MenuOptionCollectionViewCell.self,
-                                forCellWithReuseIdentifier: MenuOptionCollectionViewCell.identifier)
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.frame = view.bounds
         collectionView.backgroundColor = .yellow
-        view.addSubview(collectionView)
+        collectionView.register(MenuOptionCollectionViewCell.self,
+                                forCellWithReuseIdentifier: MenuOptionCollectionViewCell.identifier)
+        layout.itemSize.width = (collectionView.frame.size.width / 2) - 1
+        layout.itemSize.height = (collectionView.frame.size.width / 3) - 1
+       
+    }
+    
+    private func setupNavBar() {
+        navigationController?.navigationBar.addSubview(appLogo)
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
         
+    
+    private func setupLayout() {
+        view.addSubview(collectionView)
+        collectionView.addSubview(bottomView)
+        bottomView.addSubview(bottomTextLabel)
+        bottomView.addSubview(callButton)
     }
     
     override func viewDidLayoutSubviews() {
@@ -58,6 +95,11 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
                                y: 20,
                                width: 100,
                                height: 50)
+        
+        bottomView.frame = CGRect(x: (collectionView.frame.size.width / 2) - 120,
+                                  y: collectionView.frame.size.height * 0.6,
+                                  width: 240,
+                                  height: 100)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -67,6 +109,28 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MenuOptionCollectionViewCell.identifier, for: indexPath) as! MenuOptionCollectionViewCell
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch indexPath.item {
+        case 0:
+            let vc = UINavigationController(rootViewController: DataViewController())
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: true, completion: nil)
+        case 1:
+            print (indexPath.item)
+        case 2:
+            print (indexPath.item)
+        case 3:
+            print (indexPath.item)
+        case 4:
+            print (indexPath.item)
+        case 5:
+            print (indexPath.item)
+        default:
+            print ("Wrong")
+            
+        }
     }
     
 }
