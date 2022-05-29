@@ -13,5 +13,8 @@ class DataViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .green
+        navigationController?.navigationBar.prefersLargeTitles = true
+        title = Constants.arrayOfMenuNames[0]
+//        navigationController?.navigationItem.leftBarButtonItem = UIBarButtonItem(systemItem: ., primaryAction: <#T##UIAction?#>, menu: <#T##UIMenu?#>)
     }
 }

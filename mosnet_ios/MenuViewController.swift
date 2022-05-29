@@ -32,23 +32,26 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
         view.layer.cornerRadius = 8
         view.layer.borderWidth = 2
         view.layer.borderColor = UIColor.lightGray.cgColor
-        view.backgroundColor = .link
+        view.backgroundColor = .white
         return view
     }()
     
     private let bottomTextLabel: UILabel = {
         let label = UILabel()
         label.text = "Остались вопросы? Звоните!"
+        label.numberOfLines = 0
         label.font = .systemFont(ofSize: 15, weight: .heavy)
-        label.textColor = .white
+        label.textColor = .black
         return label
     }()
     
     private let callButton: UIButton = {
         let button = UIButton()
         button.layer.cornerRadius = 8
-        button.backgroundColor = .green
+        button.backgroundColor = UIColor(red: 0.15, green: 0.738, blue: 0.138, alpha: 1)
         button.layer.borderColor = UIColor.white.cgColor
+        button.setTitle("Позвонить", for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
         button.layer.borderWidth = 2
         return button
     }()
@@ -67,7 +70,6 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.frame = view.bounds
-        collectionView.backgroundColor = .yellow
         collectionView.register(MenuOptionCollectionViewCell.self,
                                 forCellWithReuseIdentifier: MenuOptionCollectionViewCell.identifier)
         layout.itemSize.width = (collectionView.frame.size.width / 2) - 1
@@ -86,6 +88,16 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
         collectionView.addSubview(bottomView)
         bottomView.addSubview(bottomTextLabel)
         bottomView.addSubview(callButton)
+        callButton.addTarget(self, action: #selector(callButtonPressed), for: .touchUpInside)
+    }
+    
+    @objc private func callButtonPressed() {
+        let alert = UIAlertController(title: nil, message: "Позвонить?", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Вызов", style: .default, handler: nil)
+        let cancelAction = UIAlertAction(title: "Отмена", style: .destructive, handler: nil)
+        alert.addAction(okAction)
+        alert.addAction(cancelAction)
+        present(alert, animated: true, completion: nil)
     }
     
     override func viewDidLayoutSubviews() {
@@ -96,10 +108,20 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
                                width: 100,
                                height: 50)
         
-        bottomView.frame = CGRect(x: (collectionView.frame.size.width / 2) - 120,
+        bottomView.frame = CGRect(x: (collectionView.frame.size.width / 2) - 140,
                                   y: collectionView.frame.size.height * 0.6,
-                                  width: 240,
-                                  height: 100)
+                                  width: 280,
+                                  height: 120)
+        
+        bottomTextLabel.frame = CGRect(x: 20,
+                                       y: 2,
+                                       width: bottomView.width - 20,
+                                       height: 60)
+        
+        callButton.frame = CGRect(x: 43,
+                                  y: bottomTextLabel.bottom + 1,
+                                  width: 200,
+                                  height: 35)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -108,6 +130,34 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MenuOptionCollectionViewCell.identifier, for: indexPath) as! MenuOptionCollectionViewCell
+        switch indexPath.row {
+        case 0:
+            cell.menuItemLabel.text = Constants.arrayOfMenuNames[0]
+            cell.optionView.backgroundColor = .orange
+            cell.menuItemImage.image = Constants.arrayOfMenuImages[0]
+        case 1:
+            cell.menuItemLabel.text = Constants.arrayOfMenuNames[1]
+            cell.optionView.backgroundColor = .systemRed
+            cell.menuItemImage.image = Constants.arrayOfMenuImages[1]
+        case 2:
+            cell.menuItemLabel.text = Constants.arrayOfMenuNames[2]
+            cell.optionView.backgroundColor = UIColor(red: 0.827, green: 0.863, blue: 0.4, alpha: 1)
+            cell.menuItemImage.image = Constants.arrayOfMenuImages[2]
+        case 3:
+            cell.menuItemLabel.text = Constants.arrayOfMenuNames[3]
+            cell.optionView.backgroundColor = .systemBlue
+            cell.menuItemImage.image = Constants.arrayOfMenuImages[3]
+        case 4:
+            cell.menuItemLabel.text = Constants.arrayOfMenuNames[4]
+            cell.optionView.backgroundColor = UIColor(red: 0.424, green: 0.745, blue: 0.231, alpha: 1)
+            cell.menuItemImage.image = Constants.arrayOfMenuImages[4]
+        case 5:
+            cell.menuItemLabel.text = Constants.arrayOfMenuNames[5]
+            cell.optionView.backgroundColor = UIColor(red: 0.808, green: 0.29, blue: 0.523, alpha: 1)
+            cell.menuItemImage.image = Constants.arrayOfMenuImages[5]
+        default:
+            break
+        }
         return cell
     }
     
