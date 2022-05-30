@@ -74,13 +74,22 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
                                 forCellWithReuseIdentifier: MenuOptionCollectionViewCell.identifier)
         layout.itemSize.width = (collectionView.frame.size.width / 2) - 1
         layout.itemSize.height = (collectionView.frame.size.width / 3) - 1
-       
     }
     
     private func setupNavBar() {
         navigationController?.navigationBar.addSubview(appLogo)
         navigationController?.navigationBar.prefersLargeTitles = true
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        appLogo.removeFromSuperview()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.addSubview(appLogo)
+    }
+    
+    
         
     
     private func setupLayout() {
@@ -164,23 +173,26 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch indexPath.item {
         case 0:
-            let vc = UINavigationController(rootViewController: DataViewController())
-            vc.modalPresentationStyle = .fullScreen
-            present(vc, animated: true, completion: nil)
+            let vc = DataViewController()
+            navigationController?.pushViewController(vc, animated: true)
         case 1:
-            print (indexPath.item)
+            let vc = AgreementAndServicesViewController()
+            navigationController?.pushViewController(vc, animated: true)
         case 2:
-            print (indexPath.item)
+            let vc = AccountConditionViewController()
+            navigationController?.pushViewController(vc, animated: true)
         case 3:
-            print (indexPath.item)
+            let vc = StatsViewController()
+            navigationController?.pushViewController(vc, animated: true)
         case 4:
-            print (indexPath.item)
+            let vc = PaymentsViewController()
+            navigationController?.pushViewController(vc, animated: true)
         case 5:
-            print (indexPath.item)
+            let vc = SettingsViewController()
+            navigationController?.pushViewController(vc, animated: true)
         default:
             print ("Wrong")
             
         }
     }
-    
 }

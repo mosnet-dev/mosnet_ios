@@ -13,8 +13,8 @@ class MenuOptionCollectionViewCell: UICollectionViewCell {
     
     let optionView: UIView = {
         let view = UIView()
-        view.layer.borderWidth = 2
-        view.layer.borderColor = UIColor.lightGray.cgColor
+//        view.layer.borderWidth = 2
+//        view.layer.borderColor = UIColor.lightGray.cgColor
         view.layer.cornerRadius = 8
         
         return view

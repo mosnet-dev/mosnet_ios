@@ -87,6 +87,7 @@ class LoginViewController: UIViewController {
         scrollView.addSubview(passwordTextField)
         scrollView.addSubview(loginButton)
         loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
+        initializeHideKeyboard()
     }
     
     override func viewDidLayoutSubviews() {
@@ -122,5 +123,16 @@ class LoginViewController: UIViewController {
         self.present(vc, animated: true, completion: nil)
     }
 
+}
+
+extension LoginViewController {
+    func initializeHideKeyboard(){
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self,
+                                                                 action: #selector(dismissMyKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    @objc func dismissMyKeyboard(){
+        view.endEditing(true)
+    }
 }
 

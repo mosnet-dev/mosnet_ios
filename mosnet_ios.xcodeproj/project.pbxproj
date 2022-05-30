@@ -12,6 +12,11 @@
 		50CA3244284169FF00C90E3C /* MenuOptionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CA3243284169FF00C90E3C /* MenuOptionCollectionViewCell.swift */; };
 		50CA32482843FA9400C90E3C /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CA32472843FA9400C90E3C /* DataViewController.swift */; };
 		50CA324A28441D4A00C90E3C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CA324928441D4A00C90E3C /* Constants.swift */; };
+		50CA324C28442E0C00C90E3C /* AgreementAndServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CA324B28442E0C00C90E3C /* AgreementAndServicesViewController.swift */; };
+		50CA324E28442E2000C90E3C /* AccountConditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CA324D28442E2000C90E3C /* AccountConditionViewController.swift */; };
+		50CA325028442E2D00C90E3C /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CA324F28442E2D00C90E3C /* StatsViewController.swift */; };
+		50CA325228442E3400C90E3C /* PaymentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CA325128442E3400C90E3C /* PaymentsViewController.swift */; };
+		50CA325428442E6100C90E3C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CA325328442E6100C90E3C /* SettingsViewController.swift */; };
 		50E03FC6283AA34E005E87C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E03FC5283AA34E005E87C0 /* AppDelegate.swift */; };
 		50E03FC8283AA34E005E87C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E03FC7283AA34E005E87C0 /* SceneDelegate.swift */; };
 		50E03FCA283AA34E005E87C0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E03FC9283AA34E005E87C0 /* LoginViewController.swift */; };
@@ -25,6 +30,11 @@
 		50CA3243284169FF00C90E3C /* MenuOptionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOptionCollectionViewCell.swift; sourceTree = "<group>"; };
 		50CA32472843FA9400C90E3C /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		50CA324928441D4A00C90E3C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		50CA324B28442E0C00C90E3C /* AgreementAndServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementAndServicesViewController.swift; sourceTree = "<group>"; };
+		50CA324D28442E2000C90E3C /* AccountConditionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountConditionViewController.swift; sourceTree = "<group>"; };
+		50CA324F28442E2D00C90E3C /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
+		50CA325128442E3400C90E3C /* PaymentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsViewController.swift; sourceTree = "<group>"; };
+		50CA325328442E6100C90E3C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		50E03FC2283AA34E005E87C0 /* mosnet_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mosnet_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50E03FC5283AA34E005E87C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50E03FC7283AA34E005E87C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +80,11 @@
 				50CA323F284165C600C90E3C /* MenuViewController.swift */,
 				50CA3243284169FF00C90E3C /* MenuOptionCollectionViewCell.swift */,
 				50CA32472843FA9400C90E3C /* DataViewController.swift */,
+				50CA324B28442E0C00C90E3C /* AgreementAndServicesViewController.swift */,
+				50CA324D28442E2000C90E3C /* AccountConditionViewController.swift */,
+				50CA324F28442E2D00C90E3C /* StatsViewController.swift */,
+				50CA325128442E3400C90E3C /* PaymentsViewController.swift */,
+				50CA325328442E6100C90E3C /* SettingsViewController.swift */,
 				50CA3241284167D800C90E3C /* Extensions.swift */,
 				50CA324928441D4A00C90E3C /* Constants.swift */,
 				50E03FCE283AA350005E87C0 /* Assets.xcassets */,
@@ -150,12 +165,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				50CA3242284167D800C90E3C /* Extensions.swift in Sources */,
+				50CA325228442E3400C90E3C /* PaymentsViewController.swift in Sources */,
+				50CA325028442E2D00C90E3C /* StatsViewController.swift in Sources */,
 				50CA32482843FA9400C90E3C /* DataViewController.swift in Sources */,
 				50E03FCA283AA34E005E87C0 /* LoginViewController.swift in Sources */,
 				50CA3244284169FF00C90E3C /* MenuOptionCollectionViewCell.swift in Sources */,
+				50CA324E28442E2000C90E3C /* AccountConditionViewController.swift in Sources */,
 				50E03FC6283AA34E005E87C0 /* AppDelegate.swift in Sources */,
 				50E03FC8283AA34E005E87C0 /* SceneDelegate.swift in Sources */,
 				50CA3240284165C600C90E3C /* MenuViewController.swift in Sources */,
+				50CA325428442E6100C90E3C /* SettingsViewController.swift in Sources */,
+				50CA324C28442E0C00C90E3C /* AgreementAndServicesViewController.swift in Sources */,
 				50CA324A28441D4A00C90E3C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
