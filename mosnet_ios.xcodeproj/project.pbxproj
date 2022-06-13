@@ -55,6 +55,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		503C24F12857663B0073CEF6 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				50E03FC9283AA34E005E87C0 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		503C24F2285766470073CEF6 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				50E03FC7283AA34E005E87C0 /* SceneDelegate.swift */,
+				50E03FC5283AA34E005E87C0 /* AppDelegate.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		503C24F3285766540073CEF6 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				503C24F4285766610073CEF6 /* Submenus */,
+				50CA3243284169FF00C90E3C /* MenuOptionCollectionViewCell.swift */,
+				50CA323F284165C600C90E3C /* MenuViewController.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		503C24F4285766610073CEF6 /* Submenus */ = {
+			isa = PBXGroup;
+			children = (
+				50CA325328442E6100C90E3C /* SettingsViewController.swift */,
+				50CA325128442E3400C90E3C /* PaymentsViewController.swift */,
+				50CA324F28442E2D00C90E3C /* StatsViewController.swift */,
+				50CA324D28442E2000C90E3C /* AccountConditionViewController.swift */,
+				50CA324B28442E0C00C90E3C /* AgreementAndServicesViewController.swift */,
+				50CA32472843FA9400C90E3C /* DataViewController.swift */,
+			);
+			path = Submenus;
+			sourceTree = "<group>";
+		};
+		503C24F52857667A0073CEF6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				50CA324928441D4A00C90E3C /* Constants.swift */,
+				50CA3241284167D800C90E3C /* Extensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		50E03FB9283AA34E005E87C0 = {
 			isa = PBXGroup;
 			children = (
@@ -74,19 +123,10 @@
 		50E03FC4283AA34E005E87C0 /* mosnet_ios */ = {
 			isa = PBXGroup;
 			children = (
-				50E03FC5283AA34E005E87C0 /* AppDelegate.swift */,
-				50E03FC7283AA34E005E87C0 /* SceneDelegate.swift */,
-				50E03FC9283AA34E005E87C0 /* LoginViewController.swift */,
-				50CA323F284165C600C90E3C /* MenuViewController.swift */,
-				50CA3243284169FF00C90E3C /* MenuOptionCollectionViewCell.swift */,
-				50CA32472843FA9400C90E3C /* DataViewController.swift */,
-				50CA324B28442E0C00C90E3C /* AgreementAndServicesViewController.swift */,
-				50CA324D28442E2000C90E3C /* AccountConditionViewController.swift */,
-				50CA324F28442E2D00C90E3C /* StatsViewController.swift */,
-				50CA325128442E3400C90E3C /* PaymentsViewController.swift */,
-				50CA325328442E6100C90E3C /* SettingsViewController.swift */,
-				50CA3241284167D800C90E3C /* Extensions.swift */,
-				50CA324928441D4A00C90E3C /* Constants.swift */,
+				503C24F2285766470073CEF6 /* Root */,
+				503C24F52857667A0073CEF6 /* Helpers */,
+				503C24F3285766540073CEF6 /* Menu */,
+				503C24F12857663B0073CEF6 /* Login */,
 				50E03FCE283AA350005E87C0 /* Assets.xcassets */,
 				50E03FD0283AA350005E87C0 /* LaunchScreen.storyboard */,
 				50E03FD3283AA350005E87C0 /* Info.plist */,
