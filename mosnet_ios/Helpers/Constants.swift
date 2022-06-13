@@ -11,4 +11,5 @@ import UIKit
 class Constants {
     static let arrayOfMenuNames = ["ОБЩИЕ ДАННЫЕ","ДОГОВОР И УСЛУГИ","СОСТОЯНИЕ СЧЕТА","СТАТИСТИКА","ОБЕЩАННЫЕ ПЛАТЕЖИ","НАСТРОЙКИ"]
     static let arrayOfMenuImages = [UIImage(systemName: "pin.circle.fill"), UIImage(systemName: "text.book.closed.fill"), UIImage(systemName: "wallet.pass.fill"), UIImage(named: "stat"), UIImage(systemName: "rublesign.circle.fill"), UIImage(systemName: "gearshape")]
+    static let phone = "+79670155934"
 }
