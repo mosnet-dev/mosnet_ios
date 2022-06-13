@@ -104,8 +104,16 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     @objc private func callButtonPressed() {
         let alert = UIAlertController(title: nil, message: "Позвонить?", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Вызов", style: .default, handler: nil)
-        let cancelAction = UIAlertAction(title: "Отмена", style: .destructive, handler: nil)
+        let okAction = UIAlertAction(title: "Вызов", style: .default) { _ in
+            print ("calling")
+            if let phoneCallUrl = URL(string: "tel://\(Constants.phone)") {
+                let application: UIApplication = UIApplication.shared
+                if application.canOpenURL(phoneCallUrl) {
+                    application.open(phoneCallUrl, options: [:], completionHandler: nil)
+                }
+            }
+        }
+        let cancelAction = UIAlertAction(title: "Отмена", style: .destructive)
         alert.addAction(okAction)
         alert.addAction(cancelAction)
         present(alert, animated: true, completion: nil)
