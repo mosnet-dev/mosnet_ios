@@ -100,7 +100,7 @@ class ReusableSquareFrame: UIView {
     private func configure() {
         
         layer.cornerRadius = 10
-        layer.borderWidth = 5
+        layer.borderWidth = 2
         layer.borderColor = UIColor.lightGray.cgColor
         
         let stackOne = UIStackView(arrangedSubviews: [leftUpperHeaderLabel, leftUpperSubtitle])

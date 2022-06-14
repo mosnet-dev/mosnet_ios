@@ -9,6 +9,14 @@ import UIKit
 
 class AgreementAndServicesViewController: UIViewController, UIGestureRecognizerDelegate {
     
+    lazy var subheader: UILabel = {
+        let label = UILabel()
+        label.text = "40/001"
+        label.textColor = .systemGreen
+        label.font = .boldSystemFont(ofSize: 25)
+        return label
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
