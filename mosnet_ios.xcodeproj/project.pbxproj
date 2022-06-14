@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		503C24F72857971C0073CEF6 /* ReusableSquareFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503C24F62857971C0073CEF6 /* ReusableSquareFrame.swift */; };
+		503C25012857A71B0073CEF6 /* PaymentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503C25002857A71B0073CEF6 /* PaymentsTableViewCell.swift */; };
+		503C25032858F3470073CEF6 /* StatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503C25022858F3470073CEF6 /* StatsTableViewCell.swift */; };
 		50CA3240284165C600C90E3C /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CA323F284165C600C90E3C /* MenuViewController.swift */; };
 		50CA3242284167D800C90E3C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CA3241284167D800C90E3C /* Extensions.swift */; };
 		50CA3244284169FF00C90E3C /* MenuOptionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CA3243284169FF00C90E3C /* MenuOptionCollectionViewCell.swift */; };
@@ -25,6 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		503C24F62857971C0073CEF6 /* ReusableSquareFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableSquareFrame.swift; sourceTree = "<group>"; };
+		503C25002857A71B0073CEF6 /* PaymentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsTableViewCell.swift; sourceTree = "<group>"; };
+		503C25022858F3470073CEF6 /* StatsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsTableViewCell.swift; sourceTree = "<group>"; };
 		50CA323F284165C600C90E3C /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		50CA3241284167D800C90E3C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		50CA3243284169FF00C90E3C /* MenuOptionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOptionCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -85,12 +91,12 @@
 		503C24F4285766610073CEF6 /* Submenus */ = {
 			isa = PBXGroup;
 			children = (
-				50CA325328442E6100C90E3C /* SettingsViewController.swift */,
-				50CA325128442E3400C90E3C /* PaymentsViewController.swift */,
-				50CA324F28442E2D00C90E3C /* StatsViewController.swift */,
-				50CA324D28442E2000C90E3C /* AccountConditionViewController.swift */,
-				50CA324B28442E0C00C90E3C /* AgreementAndServicesViewController.swift */,
-				50CA32472843FA9400C90E3C /* DataViewController.swift */,
+				503C24FD28579E530073CEF6 /* Data */,
+				503C24FC28579E4B0073CEF6 /* Agreement */,
+				503C24FB28579E400073CEF6 /* Account */,
+				503C24FA28579E2F0073CEF6 /* Stats */,
+				503C24F928579E270073CEF6 /* Payments */,
+				503C24F828579E1F0073CEF6 /* Settings */,
 			);
 			path = Submenus;
 			sourceTree = "<group>";
@@ -98,10 +104,69 @@
 		503C24F52857667A0073CEF6 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				503C24FF28579E860073CEF6 /* Reusable Elements */,
 				50CA324928441D4A00C90E3C /* Constants.swift */,
 				50CA3241284167D800C90E3C /* Extensions.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		503C24F828579E1F0073CEF6 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				50CA325328442E6100C90E3C /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		503C24F928579E270073CEF6 /* Payments */ = {
+			isa = PBXGroup;
+			children = (
+				50CA325128442E3400C90E3C /* PaymentsViewController.swift */,
+				503C25002857A71B0073CEF6 /* PaymentsTableViewCell.swift */,
+			);
+			path = Payments;
+			sourceTree = "<group>";
+		};
+		503C24FA28579E2F0073CEF6 /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+				50CA324F28442E2D00C90E3C /* StatsViewController.swift */,
+				503C25022858F3470073CEF6 /* StatsTableViewCell.swift */,
+			);
+			path = Stats;
+			sourceTree = "<group>";
+		};
+		503C24FB28579E400073CEF6 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				50CA324D28442E2000C90E3C /* AccountConditionViewController.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		503C24FC28579E4B0073CEF6 /* Agreement */ = {
+			isa = PBXGroup;
+			children = (
+				50CA324B28442E0C00C90E3C /* AgreementAndServicesViewController.swift */,
+			);
+			path = Agreement;
+			sourceTree = "<group>";
+		};
+		503C24FD28579E530073CEF6 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				50CA32472843FA9400C90E3C /* DataViewController.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		503C24FF28579E860073CEF6 /* Reusable Elements */ = {
+			isa = PBXGroup;
+			children = (
+				503C24F62857971C0073CEF6 /* ReusableSquareFrame.swift */,
+			);
+			path = "Reusable Elements";
 			sourceTree = "<group>";
 		};
 		50E03FB9283AA34E005E87C0 = {
@@ -207,11 +272,14 @@
 				50CA3242284167D800C90E3C /* Extensions.swift in Sources */,
 				50CA325228442E3400C90E3C /* PaymentsViewController.swift in Sources */,
 				50CA325028442E2D00C90E3C /* StatsViewController.swift in Sources */,
+				503C24F72857971C0073CEF6 /* ReusableSquareFrame.swift in Sources */,
 				50CA32482843FA9400C90E3C /* DataViewController.swift in Sources */,
+				503C25032858F3470073CEF6 /* StatsTableViewCell.swift in Sources */,
 				50E03FCA283AA34E005E87C0 /* LoginViewController.swift in Sources */,
 				50CA3244284169FF00C90E3C /* MenuOptionCollectionViewCell.swift in Sources */,
 				50CA324E28442E2000C90E3C /* AccountConditionViewController.swift in Sources */,
 				50E03FC6283AA34E005E87C0 /* AppDelegate.swift in Sources */,
+				503C25012857A71B0073CEF6 /* PaymentsTableViewCell.swift in Sources */,
 				50E03FC8283AA34E005E87C0 /* SceneDelegate.swift in Sources */,
 				50CA3240284165C600C90E3C /* MenuViewController.swift in Sources */,
 				50CA325428442E6100C90E3C /* SettingsViewController.swift in Sources */,
