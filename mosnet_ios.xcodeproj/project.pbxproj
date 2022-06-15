@@ -12,6 +12,12 @@
 		503C25032858F3470073CEF6 /* StatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503C25022858F3470073CEF6 /* StatsTableViewCell.swift */; };
 		503C2505285937D50073CEF6 /* ReusableTextField + Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503C2504285937D50073CEF6 /* ReusableTextField + Label.swift */; };
 		503C250728593F840073CEF6 /* ReusableLabel + Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503C250628593F840073CEF6 /* ReusableLabel + Title.swift */; };
+		503C2509285A49540073CEF6 /* DataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503C2508285A49540073CEF6 /* DataViewModel.swift */; };
+		503C250B285A49600073CEF6 /* AgreementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503C250A285A49600073CEF6 /* AgreementViewModel.swift */; };
+		503C250D285A496A0073CEF6 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503C250C285A496A0073CEF6 /* AccountViewModel.swift */; };
+		503C250F285A49730073CEF6 /* StatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503C250E285A49730073CEF6 /* StatsViewModel.swift */; };
+		503C2511285A497E0073CEF6 /* PaymentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503C2510285A497E0073CEF6 /* PaymentsViewModel.swift */; };
+		503C2513285A498A0073CEF6 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503C2512285A498A0073CEF6 /* SettingsViewModel.swift */; };
 		50CA3240284165C600C90E3C /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CA323F284165C600C90E3C /* MenuViewController.swift */; };
 		50CA3242284167D800C90E3C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CA3241284167D800C90E3C /* Extensions.swift */; };
 		50CA3244284169FF00C90E3C /* MenuOptionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CA3243284169FF00C90E3C /* MenuOptionCollectionViewCell.swift */; };
@@ -35,6 +41,12 @@
 		503C25022858F3470073CEF6 /* StatsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsTableViewCell.swift; sourceTree = "<group>"; };
 		503C2504285937D50073CEF6 /* ReusableTextField + Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReusableTextField + Label.swift"; sourceTree = "<group>"; };
 		503C250628593F840073CEF6 /* ReusableLabel + Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReusableLabel + Title.swift"; sourceTree = "<group>"; };
+		503C2508285A49540073CEF6 /* DataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewModel.swift; sourceTree = "<group>"; };
+		503C250A285A49600073CEF6 /* AgreementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementViewModel.swift; sourceTree = "<group>"; };
+		503C250C285A496A0073CEF6 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		503C250E285A49730073CEF6 /* StatsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewModel.swift; sourceTree = "<group>"; };
+		503C2510285A497E0073CEF6 /* PaymentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsViewModel.swift; sourceTree = "<group>"; };
+		503C2512285A498A0073CEF6 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		50CA323F284165C600C90E3C /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		50CA3241284167D800C90E3C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		50CA3243284169FF00C90E3C /* MenuOptionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOptionCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -119,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				50CA325328442E6100C90E3C /* SettingsViewController.swift */,
+				503C2512285A498A0073CEF6 /* SettingsViewModel.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -127,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				50CA325128442E3400C90E3C /* PaymentsViewController.swift */,
+				503C2510285A497E0073CEF6 /* PaymentsViewModel.swift */,
 				503C25002857A71B0073CEF6 /* PaymentsTableViewCell.swift */,
 			);
 			path = Payments;
@@ -136,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				50CA324F28442E2D00C90E3C /* StatsViewController.swift */,
+				503C250E285A49730073CEF6 /* StatsViewModel.swift */,
 				503C25022858F3470073CEF6 /* StatsTableViewCell.swift */,
 			);
 			path = Stats;
@@ -145,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				50CA324D28442E2000C90E3C /* AccountConditionViewController.swift */,
+				503C250C285A496A0073CEF6 /* AccountViewModel.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -153,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				50CA324B28442E0C00C90E3C /* AgreementAndServicesViewController.swift */,
+				503C250A285A49600073CEF6 /* AgreementViewModel.swift */,
 			);
 			path = Agreement;
 			sourceTree = "<group>";
@@ -161,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				50CA32472843FA9400C90E3C /* DataViewController.swift */,
+				503C2508285A49540073CEF6 /* DataViewModel.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -276,11 +294,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				503C250728593F840073CEF6 /* ReusableLabel + Title.swift in Sources */,
+				503C250D285A496A0073CEF6 /* AccountViewModel.swift in Sources */,
 				50CA3242284167D800C90E3C /* Extensions.swift in Sources */,
 				50CA325228442E3400C90E3C /* PaymentsViewController.swift in Sources */,
+				503C2509285A49540073CEF6 /* DataViewModel.swift in Sources */,
 				50CA325028442E2D00C90E3C /* StatsViewController.swift in Sources */,
 				503C24F72857971C0073CEF6 /* ReusableSquareFrame.swift in Sources */,
 				50CA32482843FA9400C90E3C /* DataViewController.swift in Sources */,
+				503C250B285A49600073CEF6 /* AgreementViewModel.swift in Sources */,
+				503C2511285A497E0073CEF6 /* PaymentsViewModel.swift in Sources */,
 				503C25032858F3470073CEF6 /* StatsTableViewCell.swift in Sources */,
 				50E03FCA283AA34E005E87C0 /* LoginViewController.swift in Sources */,
 				50CA3244284169FF00C90E3C /* MenuOptionCollectionViewCell.swift in Sources */,
@@ -288,11 +310,13 @@
 				503C2505285937D50073CEF6 /* ReusableTextField + Label.swift in Sources */,
 				50E03FC6283AA34E005E87C0 /* AppDelegate.swift in Sources */,
 				503C25012857A71B0073CEF6 /* PaymentsTableViewCell.swift in Sources */,
+				503C250F285A49730073CEF6 /* StatsViewModel.swift in Sources */,
 				50E03FC8283AA34E005E87C0 /* SceneDelegate.swift in Sources */,
 				50CA3240284165C600C90E3C /* MenuViewController.swift in Sources */,
 				50CA325428442E6100C90E3C /* SettingsViewController.swift in Sources */,
 				50CA324C28442E0C00C90E3C /* AgreementAndServicesViewController.swift in Sources */,
 				50CA324A28441D4A00C90E3C /* Constants.swift in Sources */,
+				503C2513285A498A0073CEF6 /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

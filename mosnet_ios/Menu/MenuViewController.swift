@@ -75,6 +75,7 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
     private func setupNavBar() {
         navigationController?.navigationBar.addSubview(appLogo)
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.fill.xmark")?.withTintColor(.red, renderingMode: .alwaysOriginal), style: .plain, target: self, action: #selector(logoutTapped))
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -91,6 +92,17 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
         bottomView.addSubview(bottomTextLabel)
         bottomView.addSubview(callButton)
         callButton.addTarget(self, action: #selector(callButtonPressed), for: .touchUpInside)
+    }
+    
+    @objc private func logoutTapped() {
+        
+        let alert = UIAlertController(title: "Вы уверены, что хотите выйти?", message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Да", style: .default, handler: { [weak self] _ in
+            self?.dismiss(animated: true, completion: nil)
+        }))
+        alert.addAction(UIAlertAction(title: "Нет", style: .destructive, handler: nil))
+        present(alert, animated: true, completion: nil)
+    
     }
     
     @objc private func callButtonPressed() {
