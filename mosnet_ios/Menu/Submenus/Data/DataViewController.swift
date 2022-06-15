@@ -336,14 +336,3 @@ class DataViewController: UIViewController, UIGestureRecognizerDelegate {
         present(alert, animated: true, completion: nil)
     }
 }
-
-extension DataViewController {
-    func initializeHideKeyboard(){
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self,
-                                                                 action: #selector(dismissMyKeyboard))
-        view.addGestureRecognizer(tap)
-    }
-    @objc func dismissMyKeyboard(){
-        view.endEditing(true)
-    }
-}

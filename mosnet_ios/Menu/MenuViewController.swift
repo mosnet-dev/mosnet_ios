@@ -19,11 +19,9 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
         return layout
     }()
 
-    
     private let appLogo: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "IMAGELogo")
-        
         return imageView
     }()
     
@@ -58,12 +56,10 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupCollectionView()
         setupNavBar()
         setupLayout()
     }
-    
     
     private func setupCollectionView() {
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -89,11 +85,6 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
         navigationController?.navigationBar.addSubview(appLogo)
     }
     
-    
-    
-    
-        
-    
     private func setupLayout() {
         view.addSubview(collectionView)
         collectionView.addSubview(bottomView)
@@ -103,20 +94,12 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     @objc private func callButtonPressed() {
-        let alert = UIAlertController(title: nil, message: "Позвонить?", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Вызов", style: .default) { _ in
-            print ("calling")
-            if let phoneCallUrl = URL(string: "tel://\(Constants.phone)") {
-                let application: UIApplication = UIApplication.shared
-                if application.canOpenURL(phoneCallUrl) {
-                    application.open(phoneCallUrl, options: [:], completionHandler: nil)
-                }
+        if let phoneCallUrl = URL(string: "tel://\(Constants.phone)") {
+            let application: UIApplication = UIApplication.shared
+            if application.canOpenURL(phoneCallUrl) {
+                application.open(phoneCallUrl, options: [:], completionHandler: nil)
             }
         }
-        let cancelAction = UIAlertAction(title: "Отмена", style: .destructive)
-        alert.addAction(okAction)
-        alert.addAction(cancelAction)
-        present(alert, animated: true, completion: nil)
     }
     
     override func viewDidLayoutSubviews() {
@@ -202,7 +185,6 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
             navigationController?.pushViewController(vc, animated: true)
         default:
             print ("Wrong")
-            
         }
     }
 }

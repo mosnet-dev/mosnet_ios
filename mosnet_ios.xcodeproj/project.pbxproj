@@ -10,6 +10,8 @@
 		503C24F72857971C0073CEF6 /* ReusableSquareFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503C24F62857971C0073CEF6 /* ReusableSquareFrame.swift */; };
 		503C25012857A71B0073CEF6 /* PaymentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503C25002857A71B0073CEF6 /* PaymentsTableViewCell.swift */; };
 		503C25032858F3470073CEF6 /* StatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503C25022858F3470073CEF6 /* StatsTableViewCell.swift */; };
+		503C2505285937D50073CEF6 /* ReusableTextField + Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503C2504285937D50073CEF6 /* ReusableTextField + Label.swift */; };
+		503C250728593F840073CEF6 /* ReusableLabel + Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503C250628593F840073CEF6 /* ReusableLabel + Title.swift */; };
 		50CA3240284165C600C90E3C /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CA323F284165C600C90E3C /* MenuViewController.swift */; };
 		50CA3242284167D800C90E3C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CA3241284167D800C90E3C /* Extensions.swift */; };
 		50CA3244284169FF00C90E3C /* MenuOptionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CA3243284169FF00C90E3C /* MenuOptionCollectionViewCell.swift */; };
@@ -31,6 +33,8 @@
 		503C24F62857971C0073CEF6 /* ReusableSquareFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableSquareFrame.swift; sourceTree = "<group>"; };
 		503C25002857A71B0073CEF6 /* PaymentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsTableViewCell.swift; sourceTree = "<group>"; };
 		503C25022858F3470073CEF6 /* StatsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsTableViewCell.swift; sourceTree = "<group>"; };
+		503C2504285937D50073CEF6 /* ReusableTextField + Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReusableTextField + Label.swift"; sourceTree = "<group>"; };
+		503C250628593F840073CEF6 /* ReusableLabel + Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReusableLabel + Title.swift"; sourceTree = "<group>"; };
 		50CA323F284165C600C90E3C /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		50CA3241284167D800C90E3C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		50CA3243284169FF00C90E3C /* MenuOptionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOptionCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -165,6 +169,8 @@
 			isa = PBXGroup;
 			children = (
 				503C24F62857971C0073CEF6 /* ReusableSquareFrame.swift */,
+				503C250628593F840073CEF6 /* ReusableLabel + Title.swift */,
+				503C2504285937D50073CEF6 /* ReusableTextField + Label.swift */,
 			);
 			path = "Reusable Elements";
 			sourceTree = "<group>";
@@ -269,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				503C250728593F840073CEF6 /* ReusableLabel + Title.swift in Sources */,
 				50CA3242284167D800C90E3C /* Extensions.swift in Sources */,
 				50CA325228442E3400C90E3C /* PaymentsViewController.swift in Sources */,
 				50CA325028442E2D00C90E3C /* StatsViewController.swift in Sources */,
@@ -278,6 +285,7 @@
 				50E03FCA283AA34E005E87C0 /* LoginViewController.swift in Sources */,
 				50CA3244284169FF00C90E3C /* MenuOptionCollectionViewCell.swift in Sources */,
 				50CA324E28442E2000C90E3C /* AccountConditionViewController.swift in Sources */,
+				503C2505285937D50073CEF6 /* ReusableTextField + Label.swift in Sources */,
 				50E03FC6283AA34E005E87C0 /* AppDelegate.swift in Sources */,
 				503C25012857A71B0073CEF6 /* PaymentsTableViewCell.swift in Sources */,
 				50E03FC8283AA34E005E87C0 /* SceneDelegate.swift in Sources */,
