@@ -21,9 +21,9 @@ class AccountConditionViewController: UIViewController, UIGestureRecognizerDeleg
     
     lazy var creationDate = ReusableLabelAndTitle(label: "Дата создания")
     
-    lazy var currency = ReusableLabelAndTitle(label: "Повтор нового пароля")
+    lazy var currency = ReusableLabelAndTitle(label: "Валюта счета")
     
-    lazy var availableFundsLeft = ReusableLabelAndTitle(label: "Повтор нового пароля")
+    lazy var availableFundsLeft = ReusableLabelAndTitle(label: "Доступный остаток")
     
     
     override func viewDidLoad() {
